@@ -21,7 +21,6 @@ display:flex;
 .leftnav{
     display:flex;
     width:70%;
-    /* justify-content:center; */
     align-items:center;
 }
 .rightnav{
@@ -60,7 +59,22 @@ border:2px solid grey;
 border-radius:9px;
 /* margin:27px; */
 }
+.burger{
+    display:none;
+    position:absolute;
+    right:5%;
+    top:15px;
+}
+.line{
+    width: 33px;
+height: 4px;
+margin: 5px 3px;
+background-color: white;
+    
+
+}
 .background{
+
     background:rgba(0,0,0,0.7) url(city.jpg);
     background-size:cover;
     background-blend-mode: darken;
@@ -104,15 +118,16 @@ margin: 2px;
 border: 2px solid #fff;
 border-radius: 50px;
 cursor:pointer;
-margin-right:25px;
+margin-right:45px;
 }
 .secondsection{
     display:flex;
 justify-content:space-evenly;
 align-items:center;
-height:300px;
+/* height:300px; */
 margin:auto;
 max-width:1000px;
+padding:25px;
 }
 .imgfluid{
 width: 550%;
@@ -126,7 +141,7 @@ margin: 24px 0;
     flex-direction:row-reverse;
 }
 .secondimg{
-    width:300px;
+    width:141px;
     margin: 0 25px;
 }
 .contact{
@@ -141,7 +156,7 @@ height:80vh;
 
 }
 .box{
-    max-width:300px;
+    max-width:62%;
     margin:auto;
 }
 .box-input{
@@ -163,17 +178,39 @@ margin: 0 168px;
 border: 2px solid black;
 border-radius: 14px;
 }
-@media only screen and (max-width:932px){
+
+@media only screen and (max-width:984px){
 .leftnav{
     flex-direction:column;
 }
 .navbar{
     flex-direction:column;
+    height:344px;
+    transition:All 0.7s ease-out;
 }
 .rightnav{
     text-align:center;
 }
 #search{
     width:100%;
+}
+.burger{
+display: block;
+}
+.h-nav{
+    height:72px;
+}
+.visibility{
+    opacity: 0;
+}
+.box-main{
+    flex-direction:column-reverse;
+    max-width:100%;
+}
+.secondsection{
+    flex-direction:column-reverse;
+}
+.box-input{
+    width:62%;
 }
 }
